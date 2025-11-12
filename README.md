@@ -15,3 +15,5 @@
 # Authswap
 
 Quickly switch between different user authentication contexts during manual testing.
+
+https://github.com/user-attachments/assets/a79a37d7-99b2-4dc1-bf33-311c32608fa4
