@@ -18,7 +18,8 @@ const store = useProfilesStore();
           <div class="flex flex-col">
             <h2 class="text-lg font-bold">Authswap</h2>
             <p class="text-sm text-surface-400">
-              Create and manage authentication profiles for quick switching on the Replay page
+              Create and manage authentication profiles for quick switching on
+              the Replay page
             </p>
           </div>
 

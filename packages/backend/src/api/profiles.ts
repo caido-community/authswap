@@ -47,10 +47,7 @@ export async function updateProfile(
   return { kind: "Ok", value: undefined };
 }
 
-export async function deleteProfile(
-  _: SDK,
-  id: string,
-): Promise<Result<void>> {
+export async function deleteProfile(_: SDK, id: string): Promise<Result<void>> {
   const success = await profilesStore.deleteProfile(id);
 
   if (!success) {
