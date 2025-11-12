@@ -87,6 +87,7 @@ export const init = (sdk: FrontendSDK) => {
 
           sdk.window.showToast(`Applied ${profile.name} profile`, {
             variant: "success",
+            duration: 1000  ,
           });
         },
       });
