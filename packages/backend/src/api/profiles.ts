@@ -3,6 +3,8 @@ import type { Profile, ProfileInput, Result } from "shared";
 
 import { profilesStore } from "../stores/profiles";
 
+import crypto from "crypto";
+
 export function getProfiles(_: SDK): Result<Profile[]> {
   const profiles = profilesStore.getProfiles();
   return { kind: "Ok", value: profiles };
@@ -20,7 +22,7 @@ export function getProfile(_: SDK, id: string): Result<Profile> {
 
 export async function createProfile(
   _: SDK,
-  input: ProfileInput,
+  input: ProfileInput
 ): Promise<Result<string>> {
   const id = crypto.randomUUID();
   const profile: Profile = {
@@ -36,7 +38,7 @@ export async function createProfile(
 export async function updateProfile(
   _: SDK,
   id: string,
-  updates: Partial<Omit<Profile, "id">>,
+  updates: Partial<Omit<Profile, "id">>
 ): Promise<Result<void>> {
   const success = await profilesStore.updateProfile(id, updates);
 

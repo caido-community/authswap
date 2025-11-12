@@ -5,7 +5,7 @@ import { applyMutations } from "../core/mutations";
 import { profilesStore } from "../stores/profiles";
 
 export function applyProfileMutations(
-  sdk: SDK,
+  _: SDK,
   profileId: string,
   rawRequest: string,
 ): Result<string> {
